@@ -1,3 +1,6 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from './pages/HomePage';
+import RoomDetailsPage from './pages/RoomDetailsPage';
 
 
 const App = ()=>{
@@ -5,9 +8,12 @@ const App = ()=>{
  
    return(
     <>
-      <h1 className="text-red-500">Hotel Website</h1>
-      <p className="bg-red-500 text-white text-3xl">Hello I am</p>
-      
+       <BrowserRouter>
+       <Routes>
+         <Route exact path="/" element={<HomePage/>}/>
+         <Route exact path="/rooms/:id" element={<RoomDetailsPage/>}/>
+       </Routes>
+       </BrowserRouter>
     </>
    )
 }
