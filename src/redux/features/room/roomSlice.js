@@ -5,7 +5,8 @@ import { roomData } from './../../../data/data';
 
 const initialState = {
     rooms:roomData,
-    country:"Location (any)",
+    kids:"0 Kids",
+    adults:"1 Adult",
     loading:false,
 }
 
@@ -13,15 +14,18 @@ const roomSlice = createSlice({
     name: 'room',
     initialState,
     reducers: {
-        SetCountry: (state, action) =>{
-            state.country = action.payload;
+        SetKids: (state, action) =>{
+            state.kids = action.payload;
+        },
+        SetAdults: (state, action) =>{
+            state.adults = action.payload;
         }
     }
 })
 
 
 
-export const {SetCountry} = roomSlice.actions;
+export const {SetKids, SetAdults} = roomSlice.actions;
 
 const roomSliceReducer = roomSlice.reducer;
 export default roomSliceReducer;

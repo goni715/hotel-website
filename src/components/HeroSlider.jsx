@@ -3,7 +3,9 @@
 const HeroSlider = () => {
     return (
         <>
-         <h1>Hero Slider Component</h1>   
+          <div className="heroSlider h-[600px] lg:h-[860px] bg-blue-200">
+
+          </div>
         </>
     );
 };
