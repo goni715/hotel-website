@@ -5,6 +5,8 @@ const store = configureStore({
     reducer: {
         room: roomSliceReducer,
     },
+    middleware: (getDefaultMiddleware)=>
+        getDefaultMiddleware()
 })
 
 

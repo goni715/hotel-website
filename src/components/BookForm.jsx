@@ -2,9 +2,19 @@ import CheckIn from "./Check/CheckIn";
 import Checkout from './Check/CheckOut';
 import AdultsDropdown from './AdultsDropdown';
 import KidsDropdown from './KidsDropdown';
+import { useDispatch } from "react-redux";
+import { FilterRooms } from "../redux/features/room/roomSlice";
 
 
 const BookForm = () => {
+    const dispatch = useDispatch();
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        //filter rooms by total(person)
+        dispatch(FilterRooms());
+    }
+
     return (
         <>
            <div className="container lg:w-[80%] relative">
@@ -24,6 +34,8 @@ const BookForm = () => {
                     <div className="flex-1 border-r">
                         <KidsDropdown/>
                     </div>
+                    {/* btn */}
+                    <button onClick={(e)=>handleClick(e)} type="submit" className="btn btn-primary">Check Now</button>
                 </div>
               </form>
             </div>

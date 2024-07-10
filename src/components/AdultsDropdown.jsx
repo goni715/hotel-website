@@ -12,9 +12,8 @@ const list = [
 
 const AdultsDropdown = () => {
   const {adults} = useSelector((state)=>state.room);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  console.log(adults[0]);
   return (
     <>
       <Menu as="div" className="w-full h-full bg-white relative">
@@ -30,7 +29,9 @@ const AdultsDropdown = () => {
             return (
               <MenuItem
                 key={i}
-                onClick={()=>dispatch(SetAdults(item?.name))}
+                onClick={()=>{
+                  dispatch(SetAdults(item.name))
+                }}
                 as="li"
                 className="cursor-pointer border-b last-of-type:border-b-0 h-12 hover:bg-accent hover:text-white w-full flex justify-center items-center transition"
               >
