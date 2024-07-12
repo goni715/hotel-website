@@ -22,11 +22,11 @@ const RoomDetails = () => {
       <>
         <section className="">
           {/* banner */}
-          <div className="bg-room h-[560px] bg-cover bg-center relative flex justify-center items-center">
+          <div className="bg-room h-[560px] bg-cover bg-center relative flex justify-center items-center px-6">
             {/*overlay*/}
             <div className="absolute w-full h-full bg-black/70"></div>
             {/* title */}
-            <h1 className="text-6xl text-white z-20 font-primary text-center">
+            <h1 className="text-5xl md:text-6xl text-white z-20 font-primary text-center">
               {name} Details
             </h1>
           </div>

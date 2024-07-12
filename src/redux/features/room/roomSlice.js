@@ -8,7 +8,7 @@ const initialState = {
     kids:"0 Kids",
     adults:"1 Adult",
     loading:false,
-    total:0
+    total:0,
 }
 
 const roomSlice = createSlice({
@@ -25,13 +25,16 @@ const roomSlice = createSlice({
         },
         FilterRooms: (state)=> {
             state.rooms = roomData.filter((cv)=> state.total <= cv.maxPerson);
+        },
+        SetLoading: (state, action)=>{
+            state.loading=action.payload
         }
     }
 })
 
 
 
-export const {SetKids, SetAdults, FilterRooms} = roomSlice.actions;
+export const {SetKids, SetAdults, FilterRooms, SetLoading} = roomSlice.actions;
 
 const roomSliceReducer = roomSlice.reducer;
 export default roomSliceReducer;

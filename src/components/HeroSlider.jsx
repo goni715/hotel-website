@@ -48,7 +48,7 @@ const HeroSlider = () => {
                <SwiperSlide key={index} className="h-full w-full relative">
                 <div className="z-20 text-white text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div className="uppercase font-condensed tracking-[6px] mb-5">Just Enjoy and relax</div>
-                  <h1 className="text-[32px] font-primary uppercase tracking-[2px] max-w-[920px] lg:text-[60px] mb-6">{title}</h1>
+                  <h1 className="text-[26px] sm:text-[32px] font-primary uppercase tracking-[2px] max-w-[920px] lg:text-[60px] mb-6">{title}</h1>
                   <button className="btn btn-lg btn-primary mx-auto">{btnText}</button>
                 </div>
                 <div className="absolute top-0 w-full h-full">

@@ -3,17 +3,22 @@ import Checkout from './Check/CheckOut';
 import AdultsDropdown from './AdultsDropdown';
 import KidsDropdown from './KidsDropdown';
 import { useDispatch } from "react-redux";
-import { FilterRooms } from "../redux/features/room/roomSlice";
+import { FilterRooms, SetLoading } from "../redux/features/room/roomSlice";
 
 
 const BookForm = () => {
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
-        e.preventDefault();
+      e.preventDefault();
+      dispatch(SetLoading(true));
+
+      setTimeout(() => {
         //filter rooms by total(person)
         dispatch(FilterRooms());
-    }
+        dispatch(SetLoading(false));
+      }, 1000);
+    };
 
     return (
         <>
