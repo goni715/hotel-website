@@ -28,7 +28,7 @@ const Header = () => {
                     </Link>
 
                     <nav className={`${sticky ? 'text-primary' : 'text-white'} flex items-center gap-x-4 lg:gap-x-8 font-condensed tracking-[3px] text-[15px] uppercase`}>
-                        <Link to="" className="hover:text-accent transition">Home</Link>
+                        <Link to="/" className="hover:text-accent transition">Home</Link>
                         <Link to="" className="hover:text-accent transition">Rooms</Link>
                         <Link to="" className="hover:text-accent transition">Resturant</Link>
                         <Link to="" className="hover:text-accent transition">Spa</Link>

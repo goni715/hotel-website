@@ -25,7 +25,7 @@ export default {
         condensed: ["Barlow Condensed", "sans-serif"] //tertiary
       },
       backgroundImage: {
-        room: "url('./src/assets/images/room.jpg')"
+        room: "url('./assets/images/room.jpg')"
       }
     },
   },
