@@ -9,7 +9,7 @@ const MobileMenu = ({showMenu}) => {
         <div
           className={`${
             showMenu ? "left-0" : "-left-[100%]"
-          } fixed top-0 bottom-0 h-screen z-[100] flex w-[75%] flex-col justify-between bg-white dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16 md:hidden transition-all duration-500 rounded-r-xl shadow-md`}
+          } fixed top-0 bottom-0 h-screen z-[100] flex w-[75%] flex-col justify-between bg-white px-8 pb-6 pt-16 md:hidden transition-all duration-500 rounded-r-xl shadow-md`}
         >
           <div className="card">
             <Link to="/" className="flex items-center justify-start gap-3">
